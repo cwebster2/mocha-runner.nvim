@@ -67,7 +67,7 @@ end
 local function setupAutoCommand()
   local bufnr = vim.api.nvim_get_current_buf()
   -- setup BufWrite autocommand to run test
-  vim.api.nvim_buf_create_autocmd("BufWritePost", {
+  vim.api.nvim_create_autocmd("BufWritePost", {
     group = vim.api.nvim_create_augroup("mocha_runner", { clear = true}),
     buffer = bufnr,
     callback = function() runTests() end,
