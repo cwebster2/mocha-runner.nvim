@@ -22,3 +22,8 @@ options = {
 
 You can customize the look of the pass and fail messages with the highlight
 groups `MochaRunnerSuccess` and `MochaRunnerFailure`.
+
+## Using it
+
+Run `:MochaRunner` in a buffer that has mocha tests in it, and it will run them
+and annotate their pass/fail status and update it on every write of that file.
