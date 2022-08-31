@@ -7,6 +7,16 @@ M.config = {
   fail_message = " Test Failed",
 }
 
+-- TODO lookup tests using treesitter
+--
+-- ( call expression
+--   function" (identifier) @name
+--     (#eq? @name "it")
+--   arguments: (arguments
+--     (string
+--       (string fragment) @arg ))
+-- )
+
 local function runTests()
   -- run test and decorate buffer
   local bufnr = vim.api.nvim_get_current_buf()
